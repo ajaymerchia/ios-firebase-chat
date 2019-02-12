@@ -31,6 +31,7 @@ extension LoginVC {
             if let token = LocalData.getLocalData(forKey: .fcmToken) {
                 self.user.fcmToken = token
             }
+            
             FirebaseAPI.upload(user: self.user, completion: {
                 self.advance()
             })

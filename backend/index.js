@@ -19,21 +19,33 @@ const message_template = {
 }
 
 admin.initializeApp(functions.config().firebase);
-exports.FUNCTIONNAME = functions.database.ref('PATH').onWrite((snapshot, context) => {
+exports.FUNCTIONNAME = functions.database.ref('path/{contextParameter}').onWrite((snapshot, context) => {
     // use context.params & snapshot.after.val() / snapshot.before.val() to get information
-    console.log("This function has been triggered")
-    return loadPath(RELEVANT_PATH).then(var => {
+
+    // console.log("New Message: ")
+    return loadPath(RELEVANT_PATH).then(sender => {
         // BEHAVIOR
 
-        // define a message using message_template
 
-        return admin.messaging().send(message)
+        // Define a message using message_template
+
+        // Send the message
+        if (MULTIPLE_MESSAGES) {
+            return admin.messaging().send(message)
+        } else {
+            admin.messaging().send(message)
+            return 0
+        }
     })
 })
 
 
+function copyJSON(object) {
+    return JSON.parse(JSON.stringify(object))
+}
+
 function loadPath(path) {
-  let dbRef = admin.database().ref('/users/' + uid);
+  let dbRef = admin.database().ref(path);
     let defer = new Promise((resolve, reject) => {
         dbRef.once('value', (snap) => {
             let data = snap.val();
