@@ -39,8 +39,13 @@ extension ChatVC {
     }
     
     func addMessage() {
+        
+        var newRows = Array(0..<messages.count-self.chatView.numberOfRows(inSection: 0)).map { (index) -> IndexPath in
+            return IndexPath(row: index, section: 0)
+        }
+        
         self.chatView.beginUpdates()
-        self.chatView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
+        self.chatView.insertRows(at: newRows, with: .fade)
         self.chatView.endUpdates()
     }
 

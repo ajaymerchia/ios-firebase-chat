@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7712BF54DF8957AD55AFB3697EECAB73"
+               BlueprintIdentifier = "7ED4E32A749020963F68E296BE12021C"
                BlueprintName = "ARMDevSuite"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "ARMDevSuite.framework">

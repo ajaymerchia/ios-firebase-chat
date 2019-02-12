@@ -19,8 +19,6 @@ extension ChatVC: UITextFieldDelegate {
             let duration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0
             
             UIView.animate(withDuration: duration) {
-                print(endFrameY)
-                print(self.view.frame.height)
                 self.composeBar.frame.origin = CGPoint(x: 0, y: endFrameY - self.textfieldOffset)
                 self.chatView.frame.size = CGSize(width: self.initialTableviewFrame.width, height: self.initialTableviewFrame.height - (self.view.frame.height - endFrameY))
             }
@@ -35,7 +33,7 @@ extension ChatVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         sendTextMessage()
-        return true
+        return false
     }
     
     

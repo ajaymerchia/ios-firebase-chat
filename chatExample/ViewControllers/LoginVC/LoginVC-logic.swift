@@ -18,30 +18,22 @@ extension LoginVC {
             return
         }
         
-        debugPrint("Checking for user with ID: \(Utils.hash(name))")
+        debugPrint("Checking for user with ID: \(LogicSuite.hash(name))")
         
         LocalData.putLocalData(forKey: .name, data: name)
         
         FirebaseAPI.getUser(named: name) { (userOpt) in
-            guard let user = userOpt else {
-                self.user = User(first: name)
-                if let token = LocalData.getLocalData(forKey: .fcmToken) {
-                    self.user.fcmToken = token
-                }
-                
-                FirebaseAPI.upload(user: self.user, completion: {
-                    self.advance()
-                })
-                
-                return
+            self.user = User(first: name)
+            if let user = userOpt {
+                self.user = user
             }
             
-            self.user = user
-            self.advance()
-            
-            
-            
-            
+            if let token = LocalData.getLocalData(forKey: .fcmToken) {
+                self.user.fcmToken = token
+            }
+            FirebaseAPI.upload(user: self.user, completion: {
+                self.advance()
+            })
         }
         
         

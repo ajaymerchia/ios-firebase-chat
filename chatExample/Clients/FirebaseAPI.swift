@@ -8,10 +8,11 @@
 
 import Foundation
 import FirebaseDatabase
+import ARMDevSuite
 
 class FirebaseAPI {
     static func getUser(named name: String, completion: @escaping (User?) -> ()) {
-        let uid = Utils.hash(name)
+        let uid = LogicSuite.hash(name)
         
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value) { (snap) in
             guard let data = snap.value as? [String: String] else {
@@ -63,6 +64,17 @@ class FirebaseAPI {
             onNewMessage(Message(key: snap.key, record: data))
             
         }
+    }
+    
+    
+    static func upload(_ fcmToken: String, for name: String, completion: @escaping () -> () ) {
+        let user = User(first: name)
+        user.fcmToken = fcmToken
+        
+        FirebaseAPI.upload(user: user) {
+            completion()
+        }
+        
     }
     
 }

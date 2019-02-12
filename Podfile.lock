@@ -1,28 +1,29 @@
 PODS:
-  - ARMDevSuite (0.1.19):
-    - ARMDevSuite/Alerts (= 0.1.19)
-    - ARMDevSuite/Layouts (= 0.1.19)
-    - ARMDevSuite/LocalData (= 0.1.19)
-    - ARMDevSuite/Logic (= 0.1.19)
-    - ARMDevSuite/Onboarding (= 0.1.19)
-    - ARMDevSuite/SegControl (= 0.1.19)
-    - ARMDevSuite/TextField (= 0.1.19)
-    - ARMDevSuite/UISuite (= 0.1.19)
-  - ARMDevSuite/Alerts (0.1.19):
+  - ARMDevSuite (0.1.21):
+    - ARMDevSuite/Alerts (= 0.1.21)
+    - ARMDevSuite/Layouts (= 0.1.21)
+    - ARMDevSuite/LocalData (= 0.1.21)
+    - ARMDevSuite/Logic (= 0.1.21)
+    - ARMDevSuite/Onboarding (= 0.1.21)
+    - ARMDevSuite/SegControl (= 0.1.21)
+    - ARMDevSuite/TextField (= 0.1.21)
+    - ARMDevSuite/UISuite (= 0.1.21)
+  - ARMDevSuite/Alerts (0.1.21):
     - JGProgressHUD
-  - ARMDevSuite/Layouts (0.1.19)
-  - ARMDevSuite/LocalData (0.1.19)
-  - ARMDevSuite/Logic (0.1.19)
-  - ARMDevSuite/Onboarding (0.1.19):
+  - ARMDevSuite/Layouts (0.1.21)
+  - ARMDevSuite/LocalData (0.1.21)
+  - ARMDevSuite/Logic (0.1.21):
+    - CryptoSwift
+  - ARMDevSuite/Onboarding (0.1.21):
     - ARMDevSuite/Layouts
     - ARMDevSuite/UISuite
-  - ARMDevSuite/SegControl (0.1.19):
+  - ARMDevSuite/SegControl (0.1.21):
     - ARMDevSuite/Layouts
     - ARMDevSuite/UISuite
-  - ARMDevSuite/TextField (0.1.19):
+  - ARMDevSuite/TextField (0.1.21):
     - ARMDevSuite/UISuite
     - SkyFloatingLabelTextField (~> 3.0)
-  - ARMDevSuite/UISuite (0.1.19):
+  - ARMDevSuite/UISuite (0.1.21):
     - ARMDevSuite/Layouts
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
@@ -145,7 +146,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/krzyzanowskim/CryptoSwift
 
 SPEC CHECKSUMS:
-  ARMDevSuite: 5f60feb429f1bcee6d5ceb0c95b70800b72c988e
+  ARMDevSuite: fe84b6f696c4baee0958d01f813d88be4460b8e4
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CryptoSwift: 35a10419f4dbf0619c13f8c1c180037e115323fa
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67

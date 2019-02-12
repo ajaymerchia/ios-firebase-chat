@@ -21,8 +21,7 @@ class User: Equatable, Comparable {
     var fcmToken: String?
     
     init(first: String) {
-        uid = Utils.hash(first)
-        debugPrint(uid)
+        uid = LogicSuite.hash(first)
         self.first = first
     }
     
@@ -42,6 +41,7 @@ class User: Equatable, Comparable {
     func updateUser(key: String, record: [String : Any?], _ withFriends: Bool = false) {
         self.uid = key
         self.first = record["first"] as? String ?? nil
+        self.fcmToken = record["fcm"] as? String ?? nil
         
     }
     

@@ -7,13 +7,5 @@
 //
 
 import Foundation
-import CryptoSwift
-
-class Utils {
-    static func hash(_ str: String) -> String {
-        let bytes = Data(bytes: Array(str.utf8)).sha256()
-        return bytes.toHexString()
-    }
-}
 
 

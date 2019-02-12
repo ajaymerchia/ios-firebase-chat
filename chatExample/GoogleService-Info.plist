@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>630794975087-alu3mqsvdsh6rjd8qsq7l09ndd62e8k3.apps.googleusercontent.com</string>
+	<string>254642622809-b1js9aoj6fh382m6fof0hvdv6ckggnie.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.630794975087-alu3mqsvdsh6rjd8qsq7l09ndd62e8k3</string>
+	<string>com.googleusercontent.apps.254642622809-b1js9aoj6fh382m6fof0hvdv6ckggnie</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDRFRul9xmpuFywh_fOLjuSvHhZQ43BcvI</string>
+	<string>AIzaSyBVxSbSzL4PIodAdVoRyXT5WKDoH4yGbt4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>630794975087</string>
+	<string>254642622809</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mdb.ajaymerchia.chatExample</string>
+	<string>com.mdb.ajaymerchia.chatExample2</string>
 	<key>PROJECT_ID</key>
-	<string>chatroomexample-a2024</string>
+	<string>sp19-ios-training-chatdemo</string>
 	<key>STORAGE_BUCKET</key>
-	<string>chatroomexample-a2024.appspot.com</string>
+	<string>sp19-ios-training-chatdemo.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:630794975087:ios:cb912406c703ce80</string>
+	<string>1:254642622809:ios:80248859c9ee3816</string>
 	<key>DATABASE_URL</key>
-	<string>https://chatroomexample-a2024.firebaseio.com</string>
+	<string>https://sp19-ios-training-chatdemo.firebaseio.com</string>
 </dict>
 </plist>
